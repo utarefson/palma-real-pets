@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Profile - Palma Real Pets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <header>
+            <div class="header-content">
+                <img src="images/palma-logo.svg" alt="Palma Real Pets" class="header-logo">
+                <h1>Palma Real</h1>
+            </div>
+        </header>
+
+        <main class="container">
+            <!-- Loading Spinner Section -->
+            <section class="spinner-section" id="loading-spinner">
+                <div class="spinner-container">
+                    <div class="spinner"></div>
+                    <p class="loading-text">Buscando Mascota...</p>
+                </div>
+            </section>
+
+            <!-- Pet Images Carousel Section -->
+            <section class="carousel-section" id="carousel-section" style="display: none;">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-slide active">
+                            <img src="images/pet1.jpg" alt="Pet Photo 1" id="pet-image-1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/pet2.jpg" alt="Pet Photo 2" id="pet-image-2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/pet3.jpg" alt="Pet Photo 3" id="pet-image-3">
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn carousel-btn-prev" onclick="previousSlide()">❮</button>
+                    <button class="carousel-btn carousel-btn-next" onclick="nextSlide()">❯</button>
+                    
+                    <div class="carousel-dots">
+                        <span class="dot active" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pet and Owner Information -->
+            <div class="info-container">
+                <!-- Pet Information Section -->
+                <section class="pet-info-section">
+                    <h2>Datos de la Mascota</h2>
+                    <div class="info-card">
+                        <div class="info-row">
+                            <label>Nombre:</label>
+                            <span id="pet-name">...</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Tipo:</label>
+                            <span id="pet-type">...</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Raza:</label>
+                            <span id="pet-breed">...</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Tama&ntilde;o:</label>
+                            <span id="pet-size">...</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Edad:</label>
+                            <span id="pet-age">...</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Owner Information Section -->
+                <section class="owner-info-section">
+                    <h2>Datos del Propietario</h2>
+                    <div class="info-card">
+                        <div class="info-row">
+                            <label>Departamento:</label>
+                            <span id="owner-apartment">...</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Nombre:</label>
+                            <span id="owner-first-name">...</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Apellido:</label>
+                            <span id="owner-last-name">...</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Tel&eacute;fono:</label>
+                            <span id="owner-phone">...</span>
+                        </div>
+                        <div class="info-row">
+                            <label>Email:</label>
+                            <span id="owner-email">...</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
